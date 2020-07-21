@@ -1,5 +1,5 @@
 // user input elements 
-const length = parseInt(prompt("How long would you like your password? 8 - 128?"));
+const passLength = parseInt(prompt("How long would you like your password? 8 - 128?"));
 const lowercaseBoolean = confirm("Do you want lowercase?");
 const uppercaseBoolean = confirm("Do you want uppercase?");
 const numberBoolean = confirm("Do you want numbers?");
@@ -18,10 +18,10 @@ const randomFunc = {
 
 //console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean) /* tests Booleans */
 
-generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length);
+generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, passLength);
 
 // calls random funcs 
-function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length) {
+function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, passLength) {
     // gives a place for password
     let generatedPassword = "";
 
@@ -41,6 +41,16 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
     // if nothing is true return empty
     if (typesCount === 0) {
         return "";
+    }
+
+    for (let i = 0; i < passLength; i += typesCount) {
+        typesArr.forEach(type => {
+            const funcName = Object.keys(type)[0];
+
+            console.log("funcName: ", funcName);
+
+            //    generatePassword += randomFunc[funcName]();
+        });
     }
 }
 
