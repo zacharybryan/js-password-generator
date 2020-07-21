@@ -9,14 +9,16 @@ function writePassword() {
     passwordText.value = password;
 
 }
-//object with functions
 
+// user input elements 
 const length = parseInt(prompt("How long would you like your password? 8 - 128?"));
 const lowercaseBoolean = confirm("Do you want lowercase?");
 const uppercaseBoolean = confirm("Do you want uppercase?");
 const numberBoolean = confirm("Do you want numbers?");
 const symbolBoolean = confirm("Do you want symbols");
 
+
+//object with functions
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
