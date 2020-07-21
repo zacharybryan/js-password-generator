@@ -81,25 +81,27 @@ function generatePassword() {
             console.log("funcName: ", funcName);
             if (funcName === "uppercaseBoolean") {
                 generatedPassword += getRandomUpper()
-            }
-            if (funcName === "lowercaseBoolean") {
+            } else if (funcName === "lowercaseBoolean") {
                 generatedPassword += getRandomLower()
-            }
-            if (funcName === "numberBoolean") {
+            } else if (funcName === "numberBoolean") {
                 generatedPassword += getRandomNumber()
-            }
-            if (funcName === "symbolBoolean") {
+            } else if (funcName === "symbolBoolean") {
                 generatedPassword += getRandomSymbol()
             }
-            // generatedPassword += JSON.stringify(randomFunc);
-            // console.log(randomFunc);
+
             return generatedPassword;
         });
     }
     console.log(generatedPassword);
-    console.log(scramble(generatedPassword));
 
-    writePassword(scramble(generatedPassword));
+    // add slice to creat perfect password length 
+    console.log(scramble(generatedPassword));
+    var newPassword = scramble(generatedPassword);
+    // writePassword(newPassword);
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = newPassword;
+
 }
 
 function scramble(a) {
@@ -117,13 +119,13 @@ function scramble(a) {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword(password) {
-    //  var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+// function writePassword(password) {
+//     //   var password = generatePassword();
+//     var passwordText = document.querySelector("#password");
 
-    passwordText.value = password;
+//     passwordText.value = password;
 
-}
+// }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
