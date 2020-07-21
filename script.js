@@ -29,12 +29,12 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
 
     console.log("typesCount: ", typesCount);
 
-    const typesArr = [lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean];
+    const typesArr = [{ lowercaseBoolean }, { uppercaseBoolean }, { numberBoolean }, { symbolBoolean }];
 
+    // creates array and checks it here
     console.log("typesCount: ", typesArr);
 
 }
-// console.log("typesCount: ", typesCount);
 
 // Generate Functions 
 
