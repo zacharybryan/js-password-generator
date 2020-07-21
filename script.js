@@ -14,9 +14,9 @@ const randomFunc = {
     symbol: getRandomSymbol
 };
 
-console.log(typeof length); /* works gets input length number */
+//console.log(typeof length); /* works gets input length number */
 
-
+console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean)
 
 
 // Generate Functions 
