@@ -16,7 +16,12 @@ const randomFunc = {
 
 //console.log(typeof length); /* works gets input length number */
 
-console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean)
+//console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean) /* tests Booleans */
+
+// tells where to go
+document.querySelector("#password") = generatePass(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length);
+
+
 
 
 // Generate Functions 
