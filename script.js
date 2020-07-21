@@ -18,15 +18,24 @@ const randomFunc = {
 
 //console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean) /* tests Booleans */
 
-// tells where to go
-document.querySelector("#password") = generatePass(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length);
+generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length);
 
 // calls random funcs 
-function generatePassword(lower, upper, number, symbol, length) {
-    let generatedPassword = ""
+function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, length) {
+    // gives a place for password
+    let generatedPassword = "";
 
+    const typesCount = lowercaseBoolean + uppercaseBoolean + numberBoolean + symbolBoolean;
+
+    console.log("typesCount: ", typesCount);
+
+    const typesArr = [lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean];
+
+    console.log("typesCount: ", typesArr);
 
 }
+// console.log("typesCount: ", typesCount);
+
 // Generate Functions 
 
 // http://www.net-comber.com/charset.html Character Set Guide
@@ -59,13 +68,13 @@ function getRandomSymbol() {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-//function writePassword() {
-//   var password = generatePassword();
-//    var passwordText = document.querySelector("#password");
+function writePassword() {
+    var password = generatePass();
+    var passwordText = document.querySelector("#password");
 
-//    passwordText.value = password;
+    passwordText.value = password;
 
-//}
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
