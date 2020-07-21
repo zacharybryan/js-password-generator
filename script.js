@@ -45,13 +45,24 @@ function generatePassword() {
 
     // user input elements
     const passLength = parseInt(prompt("How long would you like your password? 8 - 128?"));
+
+    while (passLength < 8 || passLength > 128) {
+        passLength = parseInt(prompt('Password must be between 8 and 128, choose again!'));
+        if (!passLength) {
+            alert('Value is needed! Start over!')
+            return (passLength);
+        }
+    }
+
     const lowercaseBoolean = confirm("Do you want lowercase?");
     const uppercaseBoolean = confirm("Do you want uppercase?");
     const numberBoolean = confirm("Do you want numbers?");
     const symbolBoolean = confirm("Do you want symbols");
 
-
-
+    if (!numberBoolean && !uppercaseBoolean && !lowercaseBoolean && !symbolBoolean) {
+        userChoice = alert('Password needs a certain criteria, please start again!')
+        return [passLength];
+    }
 
     // gives a place for password
     let generatedPassword = "";
@@ -95,6 +106,8 @@ function generatePassword() {
     console.log(generatedPassword);
 
     // add slice to creat perfect password length 
+
+
     console.log(scramble(generatedPassword));
     var newPassword = scramble(generatedPassword);
     // writePassword(newPassword);
