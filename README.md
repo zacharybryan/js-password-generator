@@ -12,17 +12,15 @@ I built this simple but effective password generator to allow the user to fully 
 
 * Customizable password length
 * Versatile letter options
-* Allows the user to choose which special characters they want
 * Generates a fully randomized password matching the criteria the user has selected
 
 ![A screenshot of the deployed Password Generator Page]()
-[Quick link to the deployed application on GitHub Pages]()
+[Quick link to the deployed application on GitHub Pages](https://zacharybryan.github.io/js-password-generator/)
 
 ### How to Use ###
 
 1. When you're ready to generate your password, click the "Generate Password" button
 1. Follow the given prompts to choose what you'd like included in your password
-1. When entering the special characters you'd like included, enter each character more than once to increase the frequency of which they appear in your generated password.
 1. Copy your newly generated password and enjoy!
 
 
