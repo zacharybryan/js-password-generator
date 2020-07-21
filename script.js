@@ -7,7 +7,7 @@ const symbolBoolean = confirm("Do you want symbols");
 
 
 //object with functions
-var randomFunc = {
+const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
