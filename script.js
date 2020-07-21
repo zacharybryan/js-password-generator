@@ -7,7 +7,7 @@ const symbolBoolean = confirm("Do you want symbols");
 
 
 //object with functions
-const randomFunc = {
+var randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
@@ -27,7 +27,7 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
 
     const typesCount = lowercaseBoolean + uppercaseBoolean + numberBoolean + symbolBoolean;
 
-    console.log("typesCount: ", typesCount);
+    //  console.log("typesCount: ", typesCount);
 
     // filters out false array items
     const typesArr = [{ lowercaseBoolean }, { uppercaseBoolean }, { numberBoolean }, { symbolBoolean }]
@@ -36,7 +36,7 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
         );
 
     // creates array and checks it here
-    console.log("typesCount: ", typesArr);
+    //  console.log("typesCount: ", typesArr);
 
     // if nothing is true return empty
     if (typesCount === 0) {
@@ -49,9 +49,11 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
 
             console.log("funcName: ", funcName);
 
-            //    generatePassword += randomFunc[funcName]();
+            generatedPassword += randomFunc;
         });
     }
+
+    console.log(generatedPassword)
 }
 
 // Generate Functions 
