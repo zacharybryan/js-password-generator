@@ -9,8 +9,22 @@ function writePassword() {
     passwordText.value = password;
 
 }
+//object with functions
 
 const length = parseInt(prompt("How long would you like your password? 8 - 128?"));
+const lowercaseBoolean = confirm("Do you want lowercase?");
+const uppercaseBoolean = confirm("Do you want uppercase?");
+const numberBoolean = confirm("Do you want numbers?");
+const symbolBoolean = confirm("Do you want symbols");
+
+const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+};
+
+
 
 
 // Generate Functions 
@@ -21,25 +35,25 @@ function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
-console.log(getRandomLower()); /*works gets random lowercase */
+//console.log(getRandomLower()); /*works gets random lowercase */
 
 function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
-console.log(getRandomUpper()); /*works gets random uppercase */
+//console.log(getRandomUpper()); /*works gets random uppercase */
 
 function getRandomNumber() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
-console.log(getRandomNumber()); /*works gets random number */
+//console.log(getRandomNumber()); /*works gets random number */
 
 function getRandomSymbol() {
     const symbols = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-console.log(getRandomSymbol()); /* works get random symbol */
+//console.log(getRandomSymbol()); /* works get random symbol */
 
 
 
