@@ -38,6 +38,10 @@ function generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, sym
     // creates array and checks it here
     console.log("typesCount: ", typesArr);
 
+    // if nothing is true return empty
+    if (typesCount === 0) {
+        return "";
+    }
 }
 
 // Generate Functions 
