@@ -89,7 +89,7 @@ function generatePassword() {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0];
 
-            console.log("funcName: ", funcName);
+            // console.log("funcName: ", funcName);
             if (funcName === "uppercaseBoolean") {
                 generatedPassword += getRandomUpper()
             } else if (funcName === "lowercaseBoolean") {
@@ -103,13 +103,16 @@ function generatePassword() {
             return generatedPassword;
         });
     }
-    console.log(generatedPassword);
+    //console.log("generated password pre slice: ", generatedPassword)
+    //console.log(generatedPassword.slice(0, passLength));
+
+    const finalPassword = generatedPassword.slice(0, passLength);
 
     // add slice to creat perfect password length 
 
 
-    console.log(scramble(generatedPassword));
-    var newPassword = scramble(generatedPassword);
+    //console.log(scramble(generatedPassword));
+    var newPassword = scramble(finalPassword);
     // writePassword(newPassword);
     var passwordText = document.querySelector("#password");
 
