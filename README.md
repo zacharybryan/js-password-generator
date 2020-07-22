@@ -1,6 +1,3 @@
-# js-password-generator
-This is a password generator
-
 # Password Generator #
 
 [Features](#features)\
@@ -8,13 +5,14 @@ This is a password generator
 
 I built this simple but effective password generator to allow the user to fully customize what characters they want to use in their randomized password. This addresses the issue of certain websites requiring specific characters but not allowing certain characters. With this generator, you can select if you want lower case letters, upper case letters, numbers, and special characters. This makes it much more functional for someone that needs to make their password fit a certain criteria. 
 
+---
 ## Features ##
 
 * Customizable password length
 * Versatile letter options
 * Generates a fully randomized password matching the criteria the user has selected
 
-![A screenshot of the deployed Password Generator Page]()
+![A screenshot of the deployed Password Generator Page](./screenshot.png)
 [Quick link to the deployed application on GitHub Pages](https://zacharybryan.github.io/js-password-generator/)
 
 ### How to Use ###
