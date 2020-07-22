@@ -50,7 +50,7 @@ function generatePassword() {
         passLength = parseInt(prompt('Password must be between 8 and 128, choose again!'));
         if (!passLength) {
             alert('Value is needed! Start over!')
-            return (passLength);
+            return generatePassword();
         }
     }
 
@@ -60,7 +60,7 @@ function generatePassword() {
     const symbolBoolean = confirm("Do you want symbols");
 
     if (!numberBoolean && !uppercaseBoolean && !lowercaseBoolean && !symbolBoolean) {
-        userChoice = alert('Password needs a certain criteria, please start again!')
+        var userChoice = alert('Password needs a certain criteria, please start again!')
         return [passLength];
     }
 
@@ -124,7 +124,7 @@ function scramble(a) {
     a = a.split("");
     for (var b = a.length - 1; 0 < b; b--) {
         var c = Math.floor(Math.random() * (b + 1));
-        d = a[b];
+        var d = a[b];
         a[b] = a[c];
         a[c] = d
     }
