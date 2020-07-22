@@ -37,9 +37,9 @@ function generatePassword() {
     const passLength = parseInt(prompt("How long would you like your password? 8 - 128?"));
 
     while (passLength < 8 || passLength > 128) {
-        passLength = parseInt(prompt('Password must be between 8 and 128, choose again!'));
+        passLength = parseInt(prompt("Password must be between 8 and 128, choose again!"));
         if (!passLength) {
-            alert('Value is needed! Start over!');
+            alert("Value is needed! Start over!");
             return generatePassword();
         }
     }
@@ -55,7 +55,7 @@ function generatePassword() {
     }
 
     // gives a place for password
-    let generatedPassword = "";
+    var generatedPassword = "";
 
     const typesCount = lowercaseBoolean + uppercaseBoolean + numberBoolean + symbolBoolean;
 
