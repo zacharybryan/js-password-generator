@@ -26,21 +26,11 @@ function getRandomSymbol() {
 
 // console.log(getRandomSymbol()); /* works get random symbol */
 
-//object with functions
-const randomFunc = {
-    lower: getRandomLower(),
-    upper: getRandomUpper(),
-    number: getRandomNumber(),
-    symbol: getRandomSymbol()
-};
-
 //console.log(typeof length); /* works gets input length number */
 
 //console.log(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean) /* tests Booleans */
 
-// ///generatePassword(lowercaseBoolean, uppercaseBoolean, numberBoolean, symbolBoolean, passLength);
 
-// generate random funcs 
 function generatePassword() {
 
     // user input elements
@@ -49,7 +39,7 @@ function generatePassword() {
     while (passLength < 8 || passLength > 128) {
         passLength = parseInt(prompt('Password must be between 8 and 128, choose again!'));
         if (!passLength) {
-            alert('Value is needed! Start over!')
+            alert('Value is needed! Start over!');
             return generatePassword();
         }
     }
@@ -60,7 +50,7 @@ function generatePassword() {
     const symbolBoolean = confirm("Do you want symbols");
 
     if (!numberBoolean && !uppercaseBoolean && !lowercaseBoolean && !symbolBoolean) {
-        var userChoice = alert('Password needs a certain criteria, please start again!')
+        var userChoice = alert('Password needs a certain criteria, please start again!');
         return [passLength];
     }
 
@@ -91,13 +81,13 @@ function generatePassword() {
 
             // console.log("funcName: ", funcName);
             if (funcName === "uppercaseBoolean") {
-                generatedPassword += getRandomUpper()
+                generatedPassword += getRandomUpper();
             } else if (funcName === "lowercaseBoolean") {
-                generatedPassword += getRandomLower()
+                generatedPassword += getRandomLower();
             } else if (funcName === "numberBoolean") {
-                generatedPassword += getRandomNumber()
+                generatedPassword += getRandomNumber();
             } else if (funcName === "symbolBoolean") {
-                generatedPassword += getRandomSymbol()
+                generatedPassword += getRandomSymbol();
             }
 
             return generatedPassword;
@@ -126,9 +116,9 @@ function scramble(a) {
         var c = Math.floor(Math.random() * (b + 1));
         var d = a[b];
         a[b] = a[c];
-        a[c] = d
+        a[c] = d;
     }
-    return a.join("")
+    return a.join("");
 }
 
 // Assignment Code
