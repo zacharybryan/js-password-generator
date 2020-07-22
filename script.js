@@ -50,7 +50,7 @@ function generatePassword() {
     const symbolBoolean = confirm("Do you want symbols");
 
     if (!numberBoolean && !uppercaseBoolean && !lowercaseBoolean && !symbolBoolean) {
-        var userChoice = alert('Password needs a certain criteria, please start again!');
+        var userChoice = alert("Password needs a certain criteria, please start again!");
         return [passLength];
     }
 
@@ -62,7 +62,7 @@ function generatePassword() {
     //   console.log("typesCount: ", typesCount);
 
     // filters out false array items
-    const typesArr = [{ lowercaseBoolean }, { uppercaseBoolean }, { numberBoolean }, { symbolBoolean }]
+    const typesArr = [{ lowercaseBoolean }, { uppercaseBoolean }, { numberBoolean }, { symbolBoolean }];
     filter(
         item => Object.values(item)[0]
     );
