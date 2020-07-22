@@ -63,9 +63,9 @@ function generatePassword() {
 
     // filters out false array items
     const typesArr = [{ lowercaseBoolean }, { uppercaseBoolean }, { numberBoolean }, { symbolBoolean }]
-        .filter(
-            item => Object.values(item)[0]
-        );
+    filter(
+        item => Object.values(item)[0]
+    );
 
     // creates array and checks it here
     //  console.log("typesCount: ", typesArr);
